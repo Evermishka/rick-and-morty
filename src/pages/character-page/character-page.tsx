@@ -1,16 +1,16 @@
 import { useParams } from 'react-router-dom';
 import styles from './character-page.module.css';
 import { useEffect, useState } from 'react';
-import type { character as characterType } from '../../types';
+import type { Character } from '../../types';
 import { transformDate } from '../../utils';
 
 type CharacterPageProps = {
-  characters: characterType[];
+  characters: Character[];
 };
 
 export const CharacterPage = ({ characters }: CharacterPageProps) => {
   const { id } = useParams();
-  const [character, setCharacter] = useState<characterType | null>(null);
+  const [character, setCharacter] = useState<Character | null>(null);
 
   useEffect(() => {
     const character = characters.find((character) => character.id.toString() === id);

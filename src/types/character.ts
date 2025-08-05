@@ -1,4 +1,4 @@
-export type character = {
+export type Character = {
     id: number,
     name: string,
     status: string,

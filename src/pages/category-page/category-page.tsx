@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { type episodes, type characters, type locations } from '../../types';
+import type { Categories } from '../../types';
 import styles from './category-page.module.css';
 
 type CategoryPageProps = {
-    categoryData: episodes | characters | locations;
+    categoryData: Categories;
 }
 
 export const CategoryPage = ({ categoryData }: CategoryPageProps) => {
