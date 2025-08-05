@@ -6,6 +6,14 @@
     background-color: #FFDB00;
 }
 
+.link {
+    color: #26355D;
+}
+
 .link:hover {
     color: #AF47D2;
+}
+
+.link:visited {
+    color: #FF8F00;
 }
