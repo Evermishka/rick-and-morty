@@ -1,23 +1,14 @@
-import { useParams } from 'react-router-dom';
-import styles from './character-page.module.css';
-import { useEffect, useState } from 'react';
-import type { Character } from '../../types';
+import { useData } from '../../hooks';
 import { transformDate } from '../../utils';
+import type { Character, Characters } from '../../types';
+import styles from './character-page.module.css';
 
 type CharacterPageProps = {
   characters: Character[];
 };
 
 export const CharacterPage = ({ characters }: CharacterPageProps) => {
-  const { id } = useParams();
-  const [character, setCharacter] = useState<Character | null>(null);
-
-  useEffect(() => {
-    const character = characters.find((character) => character.id.toString() === id);
-    if (character) {
-      setCharacter(character);
-    }    
-  }, [characters, id]);
+  const character = useData<Characters>(characters);
 
   if (!character) {
     return null;
