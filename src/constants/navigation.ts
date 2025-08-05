@@ -2,15 +2,15 @@ import { ROUTES } from "./routes";
 
 export const NAVIGATION = [
   {
-    label: 'Персонажи',
+    label: 'Characters',
     path: ROUTES.CHARACTERS,
   },
   {
-    label: 'Эпизоды',
+    label: 'Episodes',
     path: ROUTES.EPISODES,
   },
   {
-    label: 'Локации',
+    label: 'Locations',
     path: ROUTES.LOCATIONS,
   },
 ];
