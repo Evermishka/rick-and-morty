@@ -11,7 +11,7 @@ export const CategoryPage = ({ categoryData }: CategoryPageProps) => {
         <ul>
             {categoryData.map(item => (
                 <li key={item.id} className={styles.item}>
-                    <Link to="#" className={styles.link}>{item.name}</Link>
+                    <Link to={`${item.id}`} className={styles.link}>{item.name}</Link>
                 </li>
             ))}
         </ul>

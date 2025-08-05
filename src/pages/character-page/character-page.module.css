@@ -1,0 +1,13 @@
+.characterPage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.characterDescription {
+    flex: 1;
+}
+
+.characterName {
+    margin: 0;
+}
