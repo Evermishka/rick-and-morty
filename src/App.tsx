@@ -1,7 +1,7 @@
-import { Route, Routes } from "react-router-dom"
-import { MainLayout } from "./layouts"
+import { Route, Routes } from "react-router-dom";
+import { MainLayout } from "./layouts";
 
-function App() {
+function App() { 
 
   return (
       <Routes>
@@ -12,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
