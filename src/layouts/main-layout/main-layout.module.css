@@ -1,13 +1,21 @@
 .mainLayout {
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    margin: 0 auto;
     height: 100vh;
     max-width: 1000px;
-    display: grid;
-    grid-template-rows: 200px 1fr;
-    margin: 0 auto;
 }
 
 .header {
+    display: grid;
+    grid-template-rows: auto 1fr;
     padding: 40px 20px 20px 20px;
+}
+
+.title {
+    text-align: center;
+    text-decoration: none;
+    color: #26355D;
 }
 
 .main {
