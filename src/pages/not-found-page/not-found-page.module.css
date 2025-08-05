@@ -1,0 +1,17 @@
+.notFoundPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notFoundPage h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.notFoundPage p {
+    font-size: 2rem;
+    margin: 0;
+}
