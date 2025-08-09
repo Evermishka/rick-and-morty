@@ -1,3 +1,4 @@
+import type React from 'react';
 import type { DataRadius, DataSize, DataVariant } from '../../types';
 import styles from './button.module.css';
 
@@ -6,7 +7,7 @@ type ButtonProps = {
     variant?: DataVariant;
     size?: DataSize;
     radius?: DataRadius;
-    handleClick: () => void;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
     children: React.ReactNode;
 };
 
@@ -15,7 +16,7 @@ export const Button = ({
     variant = 'default',
     size = 'md',
     radius = 'xs',
-    handleClick,
+    onClick,
     children,
 }: ButtonProps) => (
     <button
@@ -24,7 +25,7 @@ export const Button = ({
         data-variant={variant}
         data-size={size}
         data-radius={radius}
-        onClick={handleClick}
+        onClick={onClick}
     >
         {children}
     </button>

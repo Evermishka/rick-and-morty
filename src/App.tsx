@@ -6,6 +6,7 @@ import {
     CharacterPage,
     EpisodePage,
     LocationPage,
+    LoginPage,
     MainPage,
     NotFoundPage,
 } from './pages';
@@ -40,6 +41,7 @@ function App() {
                     path={`${ROUTES.LOCATIONS}/:id`}
                     element={<LocationPage locations={data.locations} />}
                 />
+                <Route path={ROUTES.LOGIN} element={<LoginPage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Route>
         </Routes>
