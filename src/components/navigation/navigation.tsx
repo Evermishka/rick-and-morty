@@ -7,7 +7,7 @@ export const Navigation = () => {
         <nav className={styles.navigation}>
             <ul className={styles.navigationList}>
                 {NAVIGATION.map((e) => (
-                    <li className={styles.navigationItem}>
+                    <li className={styles.navigationItem} key={e.path}>
                         <NavLink
                             to={e.path}
                             className={({ isActive }) =>
