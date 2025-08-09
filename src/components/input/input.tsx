@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import styles from './input.module.css';
 import type { DataRadius, DataSize, DataVariant } from '../../types';
 type InputProps = {
@@ -18,7 +17,6 @@ export const Input = ({
     inputId,
     name,
     type = 'text',
-    value = '',
     placeholder = '',
     error = false,
     variant = 'default',
@@ -26,20 +24,11 @@ export const Input = ({
     size = 'md',
     disabled = false,
 }: InputProps) => {
-    const inputRef = useRef(value);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target instanceof HTMLInputElement) {
-            inputRef.current = e.target.value;
-        }
-    };
-
     return (
         <input
             className={styles.input}
             id={inputId}
             name={name}
-            value={value}
             type={type}
             placeholder={placeholder}
             disabled={disabled}
@@ -47,7 +36,6 @@ export const Input = ({
             data-radius={radius}
             data-size={size}
             data-error={!!error}
-            onChange={handleChange}
         />
     );
 };
