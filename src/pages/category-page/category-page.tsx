@@ -2,6 +2,7 @@ import { useMemo, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import type { Categories } from '../../types';
 import styles from './category-page.module.css';
+import { Button } from '../../components';
 
 type CategoryPageProps = {
     categoryData: Categories;
@@ -37,18 +38,12 @@ export const CategoryPage = ({ categoryData }: CategoryPageProps) => {
         <>
             <div className={styles.sorting}>
                 <p>Sort by:</p>
-                <button
-                    className={styles.sortingButton}
-                    onClick={() => handleSorting('asc')}
-                >
+                <Button size="xl" handleClick={() => handleSorting('asc')}>
                     Ascending
-                </button>
-                <button
-                    className={styles.sortingButton}
-                    onClick={() => handleSorting('desc')}
-                >
+                </Button>
+                <Button size="xl" handleClick={() => handleSorting('desc')}>
                     Descending
-                </button>
+                </Button>
             </div>
             <ul>
                 {sortedData.map((item) => (

@@ -1,0 +1,83 @@
+.button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.button[data-variant='default'] {
+    color: #26355d;
+    background-color: transparent;
+    border: 1px solid #26355d;
+}
+
+.button[data-variant='default']:hover {
+    color: #af47d2;
+    background-color: #ffdb00;
+}
+
+.button[data-variant='filled'] {
+    color: white;
+    background-color: #26355d;
+    border: none;
+}
+
+.button[data-variant='filled']:hover {
+    color: #af47d2;
+    background-color: #ffdb00;
+}
+
+.button[data-variant='unstyled'] {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    color: #26355d;
+    background-color: transparent;
+    border: 0.0625rem solid transparent;
+}
+
+.button[data-variant='unstyled']:hover {
+    color: #af47d2;
+}
+
+.button[data-size='xs'] {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+}
+
+.button[data-size='sm'] {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.725rem;
+}
+
+.button[data-size='md'] {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.button[data-size='lg'] {
+    padding: 0.5rem 1rem;
+    font-size: 0.975rem;
+}
+
+.button[data-size='xl'] {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+}
+
+.button[data-radius="xs"] {
+    border-radius: 0.125rem;
+}
+
+.button[data-radius="sm"] {
+    border-radius: 0.25rem;
+}
+
+.button[data-radius="md"] {
+    border-radius: 0.5rem;
+}
+
+.button[data-radius="lg"] {
+    border-radius: 1rem;
+}
+
+.button[data-radius="xl"] {
+    border-radius: 2rem;
+}
