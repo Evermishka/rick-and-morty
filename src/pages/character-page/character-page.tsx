@@ -1,6 +1,6 @@
 import { useData } from '../../hooks';
 import { transformDate } from '../../utils';
-import type { Character, Characters } from '../../types';
+import type { Character } from '../../types';
 import styles from './character-page.module.css';
 
 type CharacterPageProps = {
@@ -8,7 +8,7 @@ type CharacterPageProps = {
 };
 
 export const CharacterPage = ({ characters }: CharacterPageProps) => {
-  const character = useData<Characters>(characters);
+  const character = useData<Character>(characters);
 
   if (!character) {
     return null;

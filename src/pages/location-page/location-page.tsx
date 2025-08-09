@@ -1,6 +1,6 @@
 import { useData } from '../../hooks';
 import { transformDate } from '../../utils';
-import type { Location, Locations } from '../../types';
+import type { Location } from '../../types';
 import styles from './location-page.module.css';
 
 type LocationPageProps = {
@@ -8,7 +8,7 @@ type LocationPageProps = {
 };
 
 export const LocationPage = ({ locations }: LocationPageProps) => {
-  const location = useData<Locations>(locations);
+  const location = useData<Location>(locations);
 
   if (!location) {
     return null;

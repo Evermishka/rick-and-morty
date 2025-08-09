@@ -1,6 +1,6 @@
 import { useData } from '../../hooks';
 import { transformDate } from '../../utils';
-import type { Episode, Episodes } from '../../types';
+import type { Episode } from '../../types';
 import styles from './episode-page.module.css';
 
 type EpisodePageProps = {
@@ -8,7 +8,7 @@ type EpisodePageProps = {
 };
 
 export const EpisodePage = ({ episodes }: EpisodePageProps) => {
-  const episode = useData<Episodes>(episodes);
+  const episode = useData<Episode>(episodes);
 
   if (!episode) {
     return null;

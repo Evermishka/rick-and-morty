@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { Categories, CategoryKey, CategoryMap } from "../types";
+import type { DataItem } from "../types";
 
-export const useData = <T extends Categories>(data: T) => {
+export const useData = <T extends DataItem>(data: T[]) => {
   const { id } = useParams();
-  const [dataItem, setDataItem] = useState<CategoryMap[CategoryKey<T>] | null>(null);
+  const [dataItem, setDataItem] = useState<T | null>(null);
 
   useEffect(() => {
-    const currentDataItem = data.find((item) => item.id.toString() === id) as CategoryMap[CategoryKey<T>];
+    const currentDataItem = data.find((item) => item.id.toString() === id);
     if (currentDataItem) {
       setDataItem(currentDataItem);
     }    
