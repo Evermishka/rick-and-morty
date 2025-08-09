@@ -18,6 +18,11 @@ export default tseslint.config([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { tsx: true },
+        sourceType: 'module',
+      },
     },
   },
 ])
