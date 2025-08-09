@@ -1,0 +1,37 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 21.25rem;
+    line-height: 1.55;
+}
+
+.inputContainer {
+    position: relative;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.inputContainer[data-size="xs"] {
+    height: 1.875rem;
+    font-size: 0.6rem;
+}
+
+.inputContainer[data-size="sm"] {
+    height: 2.25rem;
+    font-size: 0.725rem;
+}
+
+.inputContainer[data-size="md"] {
+    height: 2.625rem;
+    font-size: 0.85rem;
+}
+
+.inputContainer[data-size="lg"] {
+    height: 3.15rem;
+     font-size: 0.975rem;
+}
+
+.inputContainer[data-size="xl"] {
+    height: 3.75rem;
+    font-size: 1.1rem;
+}

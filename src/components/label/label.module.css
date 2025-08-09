@@ -1,0 +1,25 @@
+.label[data-size="xs"] {
+    font-size: 0.75rem;
+}
+
+.label[data-size="sm"] {
+    font-size: 0.875rem;
+}
+
+.label[data-size="md"] {
+    font-size: 1rem;
+}
+
+.label[data-size="lg"] {
+    font-size: 1.125rem;
+}
+
+.label[data-size="xl"] {
+    font-size: 1.25rem;
+}
+
+.label[data-required="true"]::after {
+    content: "*";    
+    margin-left: 0.25rem;
+    color: red;
+}
