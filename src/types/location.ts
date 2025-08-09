@@ -4,4 +4,4 @@ export type Location = {
     type: string;
     dimension: string;
     created: string;
-}
+};

@@ -4,4 +4,4 @@ export type Episode = {
     air_date: string;
     episode: string;
     created: string;
-}
+};
