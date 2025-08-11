@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import { useLocalStorage } from '../hooks';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 type LoginFnType = (newUser: string, Cb: Function) => void;
@@ -23,15 +24,18 @@ type AuthProviderProps = {
 };
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-    const [user, setUser] = useState<string | null>(null);
+    const [currentUser, { setItem, removeItem }] = useLocalStorage('user');
+    const [user, setUser] = useState<string | null>(currentUser);
 
     const login: LoginFnType = (newUser, Cb) => {
         setUser(newUser);
+        setItem(newUser);
         Cb();
     };
 
     const logout: LogoutFnType = (Cb) => {
         setUser(null);
+        removeItem();
         Cb();
     };
 
