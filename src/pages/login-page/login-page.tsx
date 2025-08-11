@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Button, Form, TextInput } from '../../components';
+import { useAuth } from '../../context/auth-provider';
 import type { FormData } from '../../hooks';
 import styles from './login-page.module.css';
+import { ROUTES } from '../../constants';
 
 const initialState = {
     email: '',
@@ -8,8 +11,14 @@ const initialState = {
 };
 
 export const LoginPage = () => {
+    const auth = useAuth();
+    const navigate = useNavigate();
+
     const handleSubmit = (data: FormData) => {
-        console.log('LoginData', data);
+        const email = data.email;
+        auth?.login(email, () => {
+            navigate(ROUTES.MAIN);
+        });
     };
 
     return (

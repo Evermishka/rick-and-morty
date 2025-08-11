@@ -1,3 +1,4 @@
+export * from './auth-status/auth-status';
 export * from './button/button';
 export * from './error/error';
 export * from './form/form';
