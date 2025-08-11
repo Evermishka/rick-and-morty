@@ -1,7 +1,6 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 21.25rem;
     width: 100%;
     line-height: 1.55;
 }

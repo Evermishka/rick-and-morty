@@ -27,7 +27,7 @@ export const LoginPage = () => {
                     label="Enter your password"
                     placeholder="Authentication password"
                 />
-                <Button type="submit" variant="filled" size="xl">
+                <Button type="submit" variant="filled" size="xl" width="full">
                     Log in
                 </Button>
             </Form>

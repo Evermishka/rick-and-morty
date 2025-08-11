@@ -81,3 +81,11 @@
 .button[data-radius="xl"] {
     border-radius: 2rem;
 }
+
+.button[data-width="auto"] {
+    width: auto;
+}
+
+.button[data-width="full"] {
+    width: 100%;
+}
