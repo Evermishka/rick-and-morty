@@ -38,10 +38,10 @@ export const CategoryPage = ({ categoryData }: CategoryPageProps) => {
         <>
             <div className={styles.sorting}>
                 <p>Sort by:</p>
-                <Button size="xl" handleClick={() => handleSorting('asc')}>
+                <Button size="xl" onClick={() => handleSorting('asc')}>
                     Ascending
                 </Button>
-                <Button size="xl" handleClick={() => handleSorting('desc')}>
+                <Button size="xl" onClick={() => handleSorting('desc')}>
                     Descending
                 </Button>
             </div>
