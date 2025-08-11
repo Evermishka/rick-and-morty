@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import type { Categories } from '../../types';
 import styles from './category-page.module.css';
 import { Button } from '../../components';
+import { SORTING } from '../../constants/sorting';
 
 type CategoryPageProps = {
     categoryData: Categories;
@@ -38,10 +39,10 @@ export const CategoryPage = ({ categoryData }: CategoryPageProps) => {
         <>
             <div className={styles.sorting}>
                 <p>Sort by:</p>
-                <Button size="xl" onClick={() => handleSorting('asc')}>
+                <Button size="xl" onClick={() => handleSorting(SORTING.ASC)}>
                     Ascending
                 </Button>
-                <Button size="xl" onClick={() => handleSorting('desc')}>
+                <Button size="xl" onClick={() => handleSorting(SORTING.DESC)}>
                     Descending
                 </Button>
             </div>
