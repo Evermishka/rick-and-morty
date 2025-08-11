@@ -1,7 +1,8 @@
 .mainLayout {
     display: grid;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: 30px 300px 1fr;
     margin: 0 auto;
+    padding-top: 20px;
     height: 100vh;
     max-width: 1000px;
 }
@@ -9,7 +10,7 @@
 .header {
     display: grid;
     grid-template-rows: auto 1fr;
-    padding: 40px 20px 20px 20px;
+    padding: 20px;
 }
 
 .title {

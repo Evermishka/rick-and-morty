@@ -6,8 +6,8 @@ import styles from './main-layout.module.css';
 export const MainLayout = () => {
     return (
         <div className={styles.mainLayout}>
+            <AuthStatus />
             <header className={styles.header}>
-                <AuthStatus />
                 <Link className={styles.title} to={ROUTES.MAIN}>
                     <h1>Rick and Morty</h1>
                 </Link>
