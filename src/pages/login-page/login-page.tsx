@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button, Form, TextInput } from '../../components';
 import { useAuth } from '../../context/auth-provider';
 import type { FormData } from '../../hooks';
@@ -13,11 +13,16 @@ const initialState = {
 export const LoginPage = () => {
     const auth = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from || ROUTES.MAIN;
 
     const handleSubmit = (data: FormData) => {
         const email = data.email;
         auth?.login(email, () => {
-            navigate(ROUTES.MAIN);
+            navigate(from, {
+                replace: true,
+            });
         });
     };
 

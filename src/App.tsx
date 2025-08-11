@@ -12,6 +12,7 @@ import {
     NotFoundPage,
 } from './pages';
 import { data } from './data';
+import { PrivateRoute } from './components';
 
 function App() {
     return (
@@ -21,27 +22,51 @@ function App() {
                     <Route path={ROUTES.MAIN} element={<MainPage />} />
                     <Route
                         path={ROUTES.CHARACTERS}
-                        element={<CategoryPage categoryData={data.characters} />}
+                        element={
+                            <PrivateRoute>
+                                <CategoryPage categoryData={data.characters} />
+                            </PrivateRoute>
+                        }
                     />
                     <Route
                         path={`${ROUTES.CHARACTERS}/:id`}
-                        element={<CharacterPage characters={data.characters} />}
+                        element={
+                            <PrivateRoute>
+                                <CharacterPage characters={data.characters} />
+                            </PrivateRoute>
+                        }
                     />
                     <Route
                         path={ROUTES.EPISODES}
-                        element={<CategoryPage categoryData={data.episodes} />}
+                        element={
+                            <PrivateRoute>
+                                <CategoryPage categoryData={data.episodes} />
+                            </PrivateRoute>
+                        }
                     />
                     <Route
                         path={`${ROUTES.EPISODES}/:id`}
-                        element={<EpisodePage episodes={data.episodes} />}
+                        element={
+                            <PrivateRoute>
+                                <EpisodePage episodes={data.episodes} />
+                            </PrivateRoute>
+                        }
                     />
                     <Route
                         path={ROUTES.LOCATIONS}
-                        element={<CategoryPage categoryData={data.locations} />}
+                        element={
+                            <PrivateRoute>
+                                <CategoryPage categoryData={data.locations} />
+                            </PrivateRoute>
+                        }
                     />
                     <Route
                         path={`${ROUTES.LOCATIONS}/:id`}
-                        element={<LocationPage locations={data.locations} />}
+                        element={
+                            <PrivateRoute>
+                                <LocationPage locations={data.locations} />
+                            </PrivateRoute>
+                        }
                     />
                     <Route path={ROUTES.LOGIN} element={<LoginPage />} />
                     <Route path="*" element={<NotFoundPage />} />

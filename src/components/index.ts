@@ -5,4 +5,5 @@ export * from './form/form';
 export * from './input/input';
 export * from './label/label';
 export * from './navigation/navigation';
+export * from './private-route/private-route';
 export * from './text-input/text-input';
