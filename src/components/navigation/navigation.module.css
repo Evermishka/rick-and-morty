@@ -28,6 +28,10 @@
     font-size: 2rem;
 }
 
+.navigationLink:hover {
+    color: #AF47D2;
+}
+
 .navigationLink__active {
     color: #AF47D2;    
 }
